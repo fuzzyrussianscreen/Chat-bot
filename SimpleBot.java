@@ -1,4 +1,4 @@
-		import java.util.*;
+				import java.util.*;
 		import java.util.regex.*;
 
 
@@ -7,11 +7,11 @@ public class SimpleBot {
 
 	final String[] COMMON_PHRASES = {
             "Задайте вопрос корректнее. Вы можете обратиться в раздел 'Вопросы и ответы'(http://pk.ulstu.ru/?nav=faq). " +
-             "Так же вы можете обратиться по телефону 8(8422)43-05-05"};
+                    "Так же вы можете обратиться по телефону 8(8422)43-05-05"};
 	final String[] EXCLUSIVE_ANSWERS = {
             "К сожалению, я не знаю ответа на данный вопрос. " +
-             "Вы можете обратиться в раздел 'Вопросы и ответы'(http://pk.ulstu.ru/?nav=faq)." +
-             " Так же вы можете обратиться по телефону 8(8422)43-05-05"};
+                    "Вы можете обратиться в раздел 'Вопросы и ответы'(http://pk.ulstu.ru/?nav=faq)." +
+                    " Так же вы можете обратиться по телефону 8(8422)43-05-05"};
 	final Map<String, String> PATTERNS_FOR_ANALYSIS = new HashMap<String, String>() {/**
 	 *
 	 */
@@ -56,7 +56,7 @@ public class SimpleBot {
 			put("зачем\\s.*тут", "whatdoyoudoing");
 			put("зачем\\s.*здесь", "whatdoyoudoing");
 			put("что\\s.*делаешь", "whatdoyoudoing");
-            		put("что\\s.*можешь|умеешь*", "чтотыделаешь");
+            put("что\\s.*можешь|умеешь*", "чтотыделаешь");
 			put("чем\\s.*занимаешься", "whatdoyoudoing");
 			// whatdoyoudoing|e
 			put("what\\s.*doing", "whatdoyoudoing|e");
@@ -100,7 +100,7 @@ public class SimpleBot {
 
 			put("what\\s.*the passing scores", "the passing scores");
 			put("стоит\\s.|нужно заплатить\\s.*обучение*","Стоимость обучения");
-            		put("обучение*","Процесс обучения");
+            put("обучение*","Процесс обучения");
 			put("what\\s.*price for education", "educationprice");
 			put("how much\\s.* education", "educationprice");
 			put("индивидуальные достижения*|дополнительные баллы*", "Дополнительные баллы");
@@ -108,17 +108,17 @@ public class SimpleBot {
 			put("how much scores\\s.*for\\s.*certificate", "addscores");
 			put("how much scores\\s.*for\\s.*diploma","addscores");
 
-			put("как поступить", "Информация о поступлении");
+			put("поступить*", "Информация о поступлении");
 			put("how\\s.*apply", "applying");
 			put("целевой при[её]м*", "Целевой приём");
 			put("сайт [УуЛлГгТтУу]*", "Сайт УЛГТУ");
-           		 put("спорт*", "спорт");
+            put("спорт*", "спорт");
 			put("ф[ао]культет*", "факультеты");
 			put("what сourse directory", "directory");
-			put("схема корпусов", "Корпуса УЛГТУ");
+			put("корпус*", "Корпуса УЛГТУ");
 			put("the scheme of campus", "campus");
-			put("сайт\\s.*приёмной\\s.*комиссии", "Главная приёмной комиссии");
-			put("места для поступления", "Количество мест");
+
+			put("мест*", "Количество мест");
 			put("seats for admission", "seats for admission");
 
 			put("что\\s.*сдавать", "Вступительные испытания");
@@ -183,10 +183,10 @@ public class SimpleBot {
 			put("the passing scores", "You can find all information here http://pk.ulstu.ru/Documents/2017/PB1416.pdf");
 			put("Стоимость обучения", "Приказы о стоимости опубликованы на сайте ПФУ http://www.ulstu.ru/main/view/article/18107");
 			put("educationprice", "Everythink about the price http://www.ulstu.ru/main/view/article/18107");
-           		 put("Процесс обучения", "Вся информация о обучение в Улгту представлена здесь: http://www.ulstu.ru/");
+            put("Процесс обучения", "Вся информация о обучение в Улгту представлена здесь: http://www.ulstu.ru/");
 			put("Дополнительные баллы", "Информация о учете индивидуальных достижений абитуриентов ");
 			put("addscores", "So, for a certificate with honors awarded an additional 4 points ");
-           		 put("спорт", "О да, в Улгту любят спорт, информация о спортивной жизни университета доступна здесь http://pk.ulstu.ru/index.php?nav=sport");
+            put("спорт", "О да, в Улгту любят спорт, информация о спортивной жизни университета доступна здесь http://pk.ulstu.ru/index.php?nav=sport");
 			put("Информация о поступлении", "Информацию о поступлении можно узнать по ссылке http://pk.ulstu.ru/index.php?nav=rules2018");
 			put("applying", "So,let's find out what to do .Tap here  http://pk.ulstu.ru/index.php?nav=rules2018");
 			put("Целевой приём", "Информацию о целевом приёме можно узнать по ссылке http://pk.ulstu.ru/index.php?nav=celpr");
@@ -196,7 +196,7 @@ public class SimpleBot {
 			put("Вступительные испытания демовар", "Демоварианты вступительных испытаний можно найти по ссылке http://pk.ulstu.ru/index.php?id=1754");
 			put("Корпуса УЛГТУ", "Схему расположений корпусов УЛГТУ можно найти по ссылке http://pk.ulstu.ru/index.php?id=81");
 			put("campus", "The sheme of campus for you.Tap http://pk.ulstu.ru/index.php?id=81");
-			put("Главная приёмной комиссии", "Сайт приёмной комиссии http://pk.ulstu.ru/index.php?id=81");
+
 			put("Количество мест", "Количество мест можно узнать по ссылке http://pk.ulstu.ru/Documents/2018/KCP_2018.pdf");
 			put("seats for admission", "Vacant seats presented here http://pk.ulstu.ru/Documents/2018/KCP_2018.pdf");
 			put("Вступительные испытания", "Необходимые предметы можно увидеть по ссылке http://pk.ulstu.ru/Documents/2018/per_vs_isp.pdf");

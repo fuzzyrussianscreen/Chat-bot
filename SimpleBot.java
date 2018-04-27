@@ -61,6 +61,7 @@ public class SimpleBot {
 			// whatdoyoudoing|e
 			put("what\\s.*doing", "whatdoyoudoing|e");
 			put("why\\s.*you", "whatdoyoudoing|e");
+			//саня пидор
 
 			// whatdoyoulike|e
 			put("what\\s.*like", "whatdoyoulike|e");
